@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f4f1ea;
+  --ink: #1c1915;
+  --muted: #6e685f;
+  --line: #e3ddd2;
+  --card: #fffdf8;
+  --accent: #1e6b45;
+  --accent-soft: #e7f3ec;
+  --warn: #8d5b2a;
+  --warn-soft: #f8efe4;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --font-sans: var(--font-source), "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-display: var(--font-fraunces), "Songti SC", "Noto Serif SC", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button,
+a,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: #cfe6d8;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
